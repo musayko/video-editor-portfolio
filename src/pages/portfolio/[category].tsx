@@ -4,6 +4,28 @@ import { headToTalkAccounts, viralContent } from '@/data/instagram';
 import Image from 'next/image';
 import { logoAnimations, motionGraphicsVideos, mapAnimationVideos } from '@/data/animations';
 import { documentaryChannels } from '@/data/youtube';
+import { GetStaticPaths, GetStaticProps } from 'next'
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  // Define all possible category paths
+  const paths = ['animations', 'videos', 'motion-graphics'].map(category => ({
+    params: { category }
+  }))
+
+  return {
+    paths,
+    fallback: false
+  }
+}
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  // Get data for the specific category
+  return {
+    props: {
+      // Your props here
+    }
+  }
+}
 
 export default function PortfolioCategory() {
   const router = useRouter();

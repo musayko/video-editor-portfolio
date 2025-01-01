@@ -5,6 +5,8 @@ import ClientLogo from '@/components/ClientLogo';
 import WhatsAppButton from '../components/WhatsAppButton';
 import { contactConfig } from '../config/contact';
 import Image from 'next/image';
+import musaykoImage from '../../public/youtube/musayko.jpg'
+import musaozdemirImage from '../../public/youtube/musaozdemir.jpg'
 
 export default function Home() {
   return (
@@ -65,7 +67,7 @@ export default function Home() {
             <div className="flex items-center gap-4 mb-4">
               <div className="w-16 h-16 rounded-full overflow-hidden relative">
                 <Image
-                  src="/youtube/musayko.jpg"
+                  src={musaykoImage}
                   alt="@Musayko channel"
                   fill
                   className="object-cover"
@@ -94,7 +96,7 @@ export default function Home() {
             <div className="flex items-center gap-4 mb-4">
               <div className="w-16 h-16 rounded-full overflow-hidden relative">
                 <Image
-                  src="/youtube/musaozdemir.jpg"
+                  src={musaozdemirImage}
                   alt="@Musa Özdemir channel"
                   fill
                   className="object-cover"
