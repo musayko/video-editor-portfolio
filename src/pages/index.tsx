@@ -126,11 +126,25 @@ export default function Home() {
             <p className="text-gray-600 mb-6 text-center">
               Ready to start your project? Contact me directly through WhatsApp for a quick response.
             </p>
-            <WhatsAppButton 
-              phoneNumber={contactConfig.whatsapp.phoneNumber}
-              message={contactConfig.whatsapp.defaultMessage}
-              className="w-full justify-center"
-            />
+            <div className="space-y-4">
+              <WhatsAppButton 
+                phoneNumber={contactConfig.whatsapp.phoneNumber}
+                message={contactConfig.whatsapp.defaultMessage}
+                className="w-full justify-center"
+              />
+              <div className="text-center">
+                <a 
+                  href="mailto:musa.ozdemir@hotmail.com"
+                  className="w-full justify-center inline-flex items-center gap-2 bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg transition-colors duration-300"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                  </svg>
+                  Email Me
+                </a>
+                <p className="text-gray-600 mt-2">musa.ozdemir@hotmail.com</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

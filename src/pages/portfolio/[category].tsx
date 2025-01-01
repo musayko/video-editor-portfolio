@@ -4,28 +4,6 @@ import { headToTalkAccounts, viralContent } from '@/data/instagram';
 import Image from 'next/image';
 import { logoAnimations, motionGraphicsVideos, mapAnimationVideos } from '@/data/animations';
 import { documentaryChannels } from '@/data/youtube';
-import { GetStaticPaths, GetStaticProps } from 'next'
-
-export const getStaticPaths: GetStaticPaths = async () => {
-  // Define all possible category paths
-  const paths = ['animations', 'videos', 'motion-graphics'].map(category => ({
-    params: { category }
-  }))
-
-  return {
-    paths,
-    fallback: false
-  }
-}
-
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  // Get data for the specific category
-  return {
-    props: {
-      // Your props here
-    }
-  }
-}
 
 export default function PortfolioCategory() {
   const router = useRouter();
@@ -37,13 +15,16 @@ export default function PortfolioCategory() {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">Category Not Found</h1>
-          <p className="text-gray-600 mb-8">The portfolio category you're looking for doesn't exist.</p>
+          <h1 className="text-[150px] font-bold text-black mb-2">404</h1>
+          <h2 className="text-4xl font-bold text-black mb-4">This page could not be found.</h2>
           <a 
             href="/#work" 
-            className="text-purple-600 hover:text-purple-700 font-medium"
+            className="text-purple-600 hover:text-purple-700 font-medium inline-flex items-center gap-2"
           >
-            ← Back to Portfolio
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16l-4-4m0 0l4-4m-4 4h18"/>
+            </svg>
+            Back to Portfolio
           </a>
         </div>
       </div>

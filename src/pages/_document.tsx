@@ -8,6 +8,7 @@ export default function Document() {
         <meta name="description" content="Professional video editor specializing in motion graphics, short-form content, and storytelling." />
         <meta name="keywords" content="video editing, motion graphics, content creation, YouTube" />
         <link rel="icon" href="/favicon.ico" />
+        <title>Musayko - Video Editor & Content Creator</title>
       </Head>
       <body>
         <Main />
